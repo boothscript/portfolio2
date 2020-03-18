@@ -1,0 +1,58 @@
+/* 
+fonts
+font-family: 'Graduate', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;
+ */
+
+.body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+/* =================
+    Buttons
+================= */
+.btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.125rem;
+}
+
+.btn-primary {
+  background: #3dccc7;
+}
+
+/* =================
+    Typography
+================= */
+
+/* nav */
+.logo-text {
+  font-family: "Graduate", cursive;
+  font-size: 3rem;
+}
+.nav-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+/* hero */
+.hero-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+}
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
