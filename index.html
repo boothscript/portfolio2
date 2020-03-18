@@ -11,33 +11,51 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <p class="logo-text">SB</p>
-      </div>
+    <header class="grid grid-2">
+      <div class="logo-filler"></div>
+      <p class="logo-text">SB</p>
+
       <div class="nav-links">
         <a class="nav-link" href="#">Projects</a>
         <a class="nav-link" href="#">About</a>
         <a class="nav-link" href="#">Contact</a>
       </div>
-      <h1 class="hero-title">Hi, I'm Stephen.</h1>
-      <p class="hero-subtitle">
-        This is a sentance or two of really good copy that makes people want to
-        employ me.
-      </p>
-      <a href="#" class="btn btn-primary">Check out my projects.</a>
     </header>
     <main>
-      <section class="projects">
+      <section class="hero grid grid-2">
+        <h1 class="hero-title">Hi, I'm Stephen.</h1>
+        <p class="hero-subtitle">
+          This is a sentance or two of really good copy that makes people want
+          to employ me.
+        </p>
+        <a href="#" class="btn btn-primary">Check out my projects.</a>
+        <img class="hero-img" src="img/hero.svg" alt="" />
+      </section>
+      <section class="projects grid grid-2">
         <h2 class="section-title">Projects</h2>
-        <div class="project-component">
-          <img class="project-img" src="img/hero.svg" alt="" />
+        <div class="project-component grid grid-2">
+          <img class="project-img" src="img/rooter.svg" alt="" />
           <h3 class="project-title">Rooter</h3>
           <p class="project-date">Spring 2020</p>
           <p class="project-desc">
             A few sentances about my project. These sentances are well written
             and do not include any spelling mistakes
           </p>
+          <div class="project-links">
+            <a href="#"
+              ><img
+                class="btn btn-primary btn-square project-link-img"
+                src="img/computer.svg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                class="btn btn-primary btn-square project-link-img"
+                src="img/github.svg"
+                alt=""
+            /></a>
+          </div>
+
           <div class="project-stack">
             <p class="stack-item">Javascript</p>
             <p class="stack-item">HTML</p>
@@ -46,14 +64,28 @@
             <p class="stack-item">Docker</p>
           </div>
         </div>
-        <div class="project-component">
-          <img class="project-img" src="" alt="" />
+        <div class="project-component grid grid-2">
+          <img class="project-img" src="img/rooter.svg" alt="" />
           <h3 class="project-title">Rooter</h3>
           <p class="project-date">Spring 2020</p>
           <p class="project-desc">
             A few sentances about my project. These sentances are well written
             and do not include any spelling mistakes
           </p>
+          <div class="project-links">
+            <a href="#"
+              ><img
+                class="btn btn-primary btn-square project-link-img"
+                src="img/computer.svg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><img
+                class="btn btn-primary btn-square project-link-img"
+                src="img/github.svg"
+                alt=""
+            /></a>
+          </div>
           <div class="stack project-stack">
             <p class="stack-item">Javascript</p>
             <p class="stack-item">HTML</p>
@@ -63,28 +95,28 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about grid grid-2">
         <h2 class="section-title">About me</h2>
-        <div class="attrs">
+        <div class="attrs ">
           <div class="attrs-item">
-            <img class="attrs-img" src="" alt="" />
+            <img class="attrs-img" src="img/book.svg" alt="" />
             <p class="attrs-text">Proven Self Learner</p>
           </div>
           <div class="attrs-item">
-            <img class="attrs-img" src="" alt="" />
+            <img class="attrs-img" src="img/lightbulb.svg" alt="" />
             <p class="attrs-text">Creative Problem Solver</p>
           </div>
           <div class="attrs-item">
-            <img class="attrs-img" src="" alt="" />
+            <img class="attrs-img" src="img/artboard.svg" alt="" />
             <p class="attrs-text">Passionate Creator</p>
           </div>
         </div>
         <p class="about-text">
           This is some text that explains my background and my key attributes.
-          This paragraph has a few lines and id followed by another. See, I told
-          ya. If there is anything else here to say that makes me employeeable
-          then i should defenitly include it here. Prob have one more para
-          because the rule of 3’s ect.
+          This paragraph has a few lines and id followed by another.<br />
+          See, I told ya. If there is anything else here to say that makes me
+          employeeable then i should defenitly include it here.<br />
+          Prob have one more para because the rule of 3’s ect.
         </p>
         <div class="stack skills-stack">
           <p class="stack-item">Javascript</p>

@@ -5,11 +5,12 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Montserrat', sans-serif;
  */
 
-.body {
+body {
   margin: 0;
   box-sizing: border-box;
   font-size: 1rem;
 }
+
 img {
   display: block;
   width: 100%;
@@ -21,20 +22,53 @@ img {
 .btn {
   font-family: "Raleway", sans-serif;
   font-size: 1.125rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.75em 1.8em;
+  color: #000;
+  justify-self: start;
+  margin-bottom: 2em;
 }
 
 .btn-primary {
   background: #3dccc7;
 }
 
+.btn-square {
+  padding: 0.2em;
+  margin: 0.2em;
+  display: inline;
+}
+
 /* =================
     Typography
 ================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+p,
+a {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* sections */
+.section-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
+}
 
 /* nav */
 .logo-text {
   font-family: "Graduate", cursive;
   font-size: 3rem;
+  letter-spacing: -7px;
 }
 .nav-link {
   font-family: "Raleway", sans-serif;
@@ -55,4 +89,174 @@ img {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+/* project-components */
+.project-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+.project-date {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: #d0d0d0;
+}
+
+.project-desc {
+  font-size: 0.875rem;
+}
+
+.stack-item {
+  display: inline;
+  border: 2px solid #3dccc7;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+}
+
+/* about me */
+.attrs-text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+.about-text {
+  font-size: 1.5rem;
+}
+
+/* contact */
+.contact-email {
+  font-size: 1.25rem;
+}
+
+/* forms */
+.contact-form label {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* =================
+    Layout
+================= */
+.grid {
+  display: grid;
+}
+.grid-2 {
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 300px) minmax(0, 300px) minmax(
+      1em,
+      1fr
+    );
+}
+.grid-3 {
+  grid-template-columns:
+    minmax(1em, 1fr) minmax(0, 225px) minmax(0, 225px) minmax(0, 225px)
+    minmax(1em, 1fr);
+}
+
+.grid * {
+  grid-column: 2 /-2;
+}
+
+/* nav */
+header {
+  margin-top: 0.5em;
+}
+.logo-filler {
+  background: #3dccc7;
+  grid-column: 1;
+  width: 100%;
+}
+.logo-text {
+  grid-column: 2;
+  background: #3dccc7;
+  justify-self: start;
+  padding-right: 10px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+.nav-links {
+  grid-column: 3;
+  display: none;
+}
+
+/* hero */
+.hero {
+  padding: 8em 0 8em;
+}
+.hero-subtitle {
+  margin-bottom: 1.5em;
+}
+.hero-img {
+  display: none;
+}
+
+/* project component */
+.projects {
+  background: url(../img/background-accent.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-bottom: 6em;
+}
+.project-component {
+  margin: 2em;
+  padding: 2em 0;
+  background: #f9fdfd;
+}
+.project-img {
+  margin-bottom: 1em;
+}
+.project-title {
+  margin-bottom: 0px;
+}
+.stack-item {
+  line-height: 2.25;
+}
+.project-link-img {
+  width: 28px;
+}
+.project-links:first-child {
+  margin-left: 0;
+}
+
+/* about */
+.about {
+  background: #cdf2f1;
+}
+
+.attrs {
+  margin: 3em 0;
+}
+.attrs-item {
+  display: flex;
+  margin-bottom: 0.4em;
+}
+.attrs-text {
+  margin-left: 0.3em;
+  margin-bottom: 0;
+}
+.attrs-img {
+  width: 36px;
+}
+.about-text {
+  margin-bottom: 2em;
+}
+/* contact */
+.contact {
+  background: #f2f5f5;
+}
+.contact-form {
+  background: #fff;
+  display: grid;
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+}
+.contact-form textarea {
+  resize: none;
+  height: 60px;
 }
