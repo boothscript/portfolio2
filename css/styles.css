@@ -129,9 +129,10 @@ a {
 /* contact */
 .contact-email {
   font-family: "Raleway", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 0.5em;
+  opacity: 0.5;
 }
 .contact-cv {
   font-family: "Raleway", sans-serif;
@@ -140,12 +141,12 @@ a {
 }
 .contact-bg-text {
   font-family: "Raleway", sans-serif;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 800;
   color: #3dccc7;
   opacity: 0.2;
-  justify-self: center;
-  margin: -20px 0 0;
+  margin: 0;
+  /* text-align: center; */
 }
 
 /* forms */
@@ -162,6 +163,11 @@ a {
   .skills-stack {
     font-size: 2rem;
   }
+  .contact-bg-text {
+    font-size: 6rem;
+    line-height: 1.1;
+    text-align: right;
+  }
 }
 
 /* =================
@@ -176,9 +182,7 @@ a {
       1fr
     );
 }
-.grid-projects,
-.grid-contact,
-.grid-forms {
+.grid-projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
@@ -393,11 +397,39 @@ header {
   height: 60px;
 }
 .contact-links {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.contact-socials {
+  width: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact-social-img {
+  width: 36px;
   opacity: 0.5;
 }
 
-.contact-social-img {
-  width: 28px;
-  display: inline;
+@media (min-width: 768px) {
+  .contact {
+    padding-bottom: 2em;
+  }
+  .contact-form {
+    grid-column: 2;
+  }
+  .contact-form .btn {
+    margin-bottom: 0;
+  }
+  .contact-links {
+    grid-column: 3;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .contact-socials {
+    margin-top: auto;
+  }
+  .contact-bg-text {
+    line-height: 0.8;
+  }
 }
