@@ -28,6 +28,7 @@ img {
   color: #000;
   justify-self: start;
   margin-bottom: 2em;
+  border: none;
 }
 
 .btn-primary {
@@ -119,7 +120,7 @@ a {
 .attrs-text {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .about-text {
   font-size: 1.5rem;
@@ -127,7 +128,24 @@ a {
 
 /* contact */
 .contact-email {
+  font-family: "Raleway", sans-serif;
   font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+}
+.contact-cv {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-decoration: underline;
+}
+.contact-bg-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 5em;
+  font-weight: 800;
+  color: #3dccc7;
+  opacity: 0.2;
+  justify-self: center;
+  margin: -20px 0 0;
 }
 
 /* forms */
@@ -222,7 +240,11 @@ header {
 
 /* about */
 .about {
-  background: #cdf2f1;
+  background-color: #cdf2f1;
+  background-image: url(../img/background-accent-bottom.svg);
+  padding-bottom: 6em;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .attrs {
@@ -242,12 +264,17 @@ header {
 .about-text {
   margin-bottom: 2em;
 }
+.about-img {
+  width: 30%;
+  justify-self: center;
+  margin: 2em 0;
+}
 /* contact */
 .contact {
   background: #f2f5f5;
 }
 .contact-form {
-  background: #fff;
+  background: #f2f5f5;
   display: grid;
 }
 .contact-form input,
@@ -255,8 +282,31 @@ header {
   border: 1px solid #d0d0d0;
   border-radius: 3px;
   padding: 0.5em 1em;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.5em;
 }
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3dccc7;
+}
+.contact-form input {
+}
+.contact-form button {
+  justify-self: right;
+}
+
 .contact-form textarea {
   resize: none;
   height: 60px;
+}
+.contact-links {
+  text-align: right;
+  opacity: 0.5;
+}
+
+.contact-social-img {
+  width: 28px;
+  display: inline;
 }
