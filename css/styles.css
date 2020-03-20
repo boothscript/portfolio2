@@ -202,6 +202,7 @@ header {
   margin-top: 0.5em;
   grid-auto-flow: dense;
   position: fixed;
+  width: 100%;
 }
 
 .logo-filler {
@@ -229,6 +230,8 @@ header {
   height: 100vh;
   width: 100vw;
   left: 100%;
+  transform: translateX(0);
+  transition: transform 200ms ease-in-out;
 }
 .nav-open {
   grid-column: 3;
@@ -238,6 +241,7 @@ header {
   background: #fff;
   margin-bottom: 0;
   padding-left: 10px;
+  cursor: pointer;
 }
 .nav-open-filler {
   background: #fff;
@@ -252,6 +256,7 @@ header {
   right: 0;
   margin: 0.5em;
   line-height: 0.8;
+  cursor: pointer;
 }
 
 .nav-active {
@@ -383,6 +388,7 @@ header {
   .attrs-item {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
   .attrs-img {
     width: 48px;
