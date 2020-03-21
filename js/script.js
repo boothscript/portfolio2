@@ -24,6 +24,13 @@ window.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("nav-active");
     navOpen.classList.toggle("nav-active");
   });
+
+  //   close nav onclick
+  navLinks.addEventListener("click", () => {
+    navExit.classList.remove("nav-active");
+    navLinks.classList.remove("nav-active");
+    navOpen.classList.remove("nav-active");
+  });
 });
 
 // ===== desktop nav =====

@@ -17,9 +17,15 @@
       <p class="logo-text">SB</p>
       <div class="nav-links ">
         <p class="nav-exit">&times;</p>
-        <a class="nav-link" href="#">Projects</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#projects"
+          ><span data-hover="Projects">Projects</span></a
+        >
+        <a class="nav-link" href="#about"
+          ><span data-hover="About">About</span></a
+        >
+        <a class="nav-link" href="#contact"
+          ><span data-hover="Contact">Contact</span></a
+        >
       </div>
     </header>
     <main>
@@ -30,10 +36,10 @@
             This is a sentance or two of really good copy that makes people want
             to employ me.
           </p>
-          <a href="#" class="btn btn-primary">Check out my projects.</a>
+          <a href="#projects" class="btn btn-primary">Check out my projects.</a>
         </div>
       </section>
-      <section class="projects grid-2">
+      <section class="projects grid-2" id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="grid-projects grid">
           <div class="project-component grid-2">
@@ -45,17 +51,17 @@
               and do not include any spelling mistakes
             </p>
             <div class="project-links">
-              <a href="#"
-                ><img
-                  class="btn btn-primary btn-square project-link-img"
-                  src="img/computer.svg"
-                  alt=""
+              <a
+                href="#"
+                class="btn btn-primary btn-square btn-expand"
+                data-hover="&nbsp;view demo"
+                ><img class="project-link-img" src="img/computer.svg" alt=""
               /></a>
-              <a href="#"
-                ><img
-                  class="btn btn-primary btn-square project-link-img"
-                  src="img/github.svg"
-                  alt=""
+              <a
+                href="#"
+                class="btn btn-primary btn-square btn-expand"
+                data-hover="&nbsp;view code"
+                ><img class=" project-link-img" src="img/github.svg" alt=""
               /></a>
             </div>
 
@@ -76,17 +82,17 @@
               and do not include any spelling mistakes
             </p>
             <div class="project-links">
-              <a href="#"
-                ><img
-                  class="btn btn-primary btn-square project-link-img"
-                  src="img/computer.svg"
-                  alt=""
+              <a
+                href="#"
+                class="btn btn-primary btn-square btn-expand"
+                data-hover="&nbsp;view demo"
+                ><img class="project-link-img" src="img/computer.svg" alt=""
               /></a>
-              <a href="#"
-                ><img
-                  class="btn btn-primary btn-square project-link-img"
-                  src="img/github.svg"
-                  alt=""
+              <a
+                href="#"
+                class="btn btn-primary btn-square btn-expand"
+                data-hover="&nbsp;view code"
+                ><img class="project-link-img" src="img/github.svg" alt=""
               /></a>
             </div>
             <div class="stack project-stack">
@@ -99,7 +105,7 @@
           </div>
         </div>
       </section>
-      <section class="about grid-2">
+      <section class="about grid-2" id="about">
         <h2 class="section-title">About me</h2>
         <div class="attrs ">
           <div class="attrs-item">
@@ -142,7 +148,7 @@
 
         <img class="about-img" src="img/about.svg" alt="" />
       </section>
-      <section class="contact grid-2">
+      <section class="contact grid-2" id="contact">
         <h2 class="section-title">Contact</h2>
         <form class="contact-form" method="POST" action="#">
           <label for="name">Name</label>

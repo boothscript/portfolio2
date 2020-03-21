@@ -16,6 +16,10 @@ img {
   width: 100%;
 }
 
+a:focus {
+  border-color: #3dccc7;
+}
+
 /* =================
     Buttons
 ================= */
@@ -35,10 +39,37 @@ img {
   background: #3dccc7;
 }
 
+.btn-primary:hover,
+.btn-primary:focus {
+  /* background: #dc758f; */
+  background: #f6ae2d;
+}
+
 .btn-square {
+  display: inline;
   padding: 0.2em;
   margin: 0.2em;
+}
+
+.btn-expand {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.btn-expand img {
   display: inline;
+}
+
+.btn-expand::after {
+  content: attr(data-hover);
+  padding: 0 0px;
+  text-overflow: clip;
+  white-space: nowrap;
+  width: 0px;
+}
+.btn-expand:hover::after,
+.btn-expand:focus::after {
+  width: 100%;
 }
 
 /* =================
@@ -176,7 +207,8 @@ a {
 /* =================
     Layout
 ================= */
-.grid {
+section {
+  padding-top: 75px;
 }
 .grid-2 {
   display: grid;
@@ -290,6 +322,25 @@ header {
     transform: translateX(0);
     transition: transform 200ms;
   }
+  .nav-link {
+    overflow: hidden;
+  }
+  .nav-link span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.15s;
+  }
+  .nav-link span::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    display: block;
+    font-weight: 800;
+  }
+  .nav-link:hover span,
+  .nav-link:focus span {
+    transform: translateY(-100%);
+  }
   .nav-exit {
     display: none;
   }
@@ -387,6 +438,9 @@ header {
 }
 .project-link-img {
   width: 28px;
+}
+.project-links {
+  display: flex;
 }
 .project-links:first-child {
   margin-left: 0;
