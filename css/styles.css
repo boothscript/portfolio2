@@ -157,6 +157,9 @@ a {
 }
 
 @media (min-width: 768px) {
+  .nav-link {
+    font-size: 1.5rem;
+  }
   .attrs-text {
     font-weight: 800;
   }
@@ -232,6 +235,7 @@ header {
   left: 100%;
   transform: translateX(0);
   transition: transform 200ms ease-in-out;
+  z-index: 1;
 }
 .nav-open {
   grid-column: 3;
@@ -240,19 +244,22 @@ header {
   line-height: 1.2;
   background: #fff;
   margin-bottom: 0;
-  padding-left: 10px;
+  padding: 0 20px 0 10px;
   cursor: pointer;
+  position: absolute;
+  transform: translateX(-57px);
 }
 .nav-open-filler {
   background: #fff;
   grid-column: 4;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 .nav-exit {
   position: absolute;
   font-size: 3em;
-  top: 0;
+  top: 50px;
   right: 0;
   margin: 0.5em;
   line-height: 0.8;
@@ -262,10 +269,63 @@ header {
 .nav-active {
   transform: translateX(-100%);
 }
+.nav-links.nav-active {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.nav-open.nav-active {
+  visibility: hidden;
+}
+
+/* desktop nav */
+@media (min-width: 768px) {
+  .nav-links {
+    flex-direction: row;
+    position: static;
+    height: inherit;
+    width: inherit;
+    justify-content: space-around;
+    width: 80%;
+    justify-self: right;
+    transform: translateX(0);
+    transition: transform 200ms;
+  }
+  .nav-exit {
+    display: none;
+  }
+  .nav-open {
+    transform: translateX(0px);
+    padding: 0 20px 0 10px;
+    grid-column: 5;
+    justify-self: start;
+    position: static;
+    visibility: hidden;
+  }
+  .nav-filler {
+    position: absolute;
+  }
+  /* scroll logic */
+  html:not([data-scroll="0"]) .nav-links {
+    transform: translateX(100%);
+  }
+  html:not([data-scroll="0"]) .nav-open {
+    transform: translateX(-57px);
+    visibility: visible;
+    transition: 100ms ease-in;
+  }
+  html:not([data-scroll="0"]) .nav-links.nav-active {
+    transform: translateX(0);
+  }
+  html:not([data-scroll="0"]) .nav-open.nav-active {
+    transform: translateX(0);
+    visibility: hidden;
+    transition: 100ms ease-in;
+  }
+}
 
 /* hero */
 .hero {
-  height: 95vh;
+  height: 100vh;
 }
 .hero-content {
   display: flex;
